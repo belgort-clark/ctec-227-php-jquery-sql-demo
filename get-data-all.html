@@ -4,6 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Get JSON data from a PHP script on web server</title>
+    <style>
+        div.student {
+            background: #dadada;
+            border: 1px solid #333333;
+            margin: 0 0 20px 0;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -29,12 +37,10 @@
                     console.log(data);
                     let innerHTML = '';
                     for (let i = 0; i < data.length; i++) {
-                        for (let j = 0; j < data[i].length; j++) {
-                            innerHTML = "<p>Contact ID: " + data[i].j.id + "</p>"; // build html
-                            innerHTML += "<p>First Name: " + data[i].j.first_name + "</p>";
-                            innerHTML += "<p>Last Name: " + data[i].j.last_name + "</p>";
-                            innerHTML += "<p>Email: " + data[i].j.email + "</p>";
-                    }
+                            innerHTML += "<div class=\"student\"><p>Contact ID: " + data[i].id + "</p>"; // build html
+                            innerHTML += "<p>First Name: " + data[i].first_name + "</p>";
+                            innerHTML += "<p>Last Name: " + data[i].last_name + "</p>";
+                            innerHTML += "<p>Email: " + data[i].email + "</p></div>";
                 }
 
                     $('#output').html(innerHTML);    
