@@ -12,9 +12,7 @@ if ($db->connect_error) {
 $db->set_charset('utf8');
 
 # Is there a query paremeter in the URL?
-if(isset($_GET['id'])) {
-    $id = $_GET['id']; // get id
-    $sql = 'SELECT * FROM student_v2 WHERE ID=' . $id;
-    $result = $db->query($sql); // query the database
-    echo json_encode($result->fetch_assoc()); // get row and json_encode
-}
+
+$sql = 'SELECT * FROM student_v2';
+$result = $db->query($sql); // query the database
+echo json_encode($result->fetch_all(MYSQLI_ASSOC)); // get row and json_encode
