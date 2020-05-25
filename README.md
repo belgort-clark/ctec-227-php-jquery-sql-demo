@@ -11,8 +11,10 @@ The code in this repo demonstrates how to retreive SQL data from MySQL using PHP
 
 - [get-data-fetch.html](get-data-fetch.html)
 - [get-data-all-fetch.html](get-data-fetch-all.html)
+- [fetch-post.html](fetch-post.html)
 
 ## PHP Code
 
 - [get-sql-data-all.php](get-sql-data-all.php)
 - [get-sql-data.php](get-sql-data.php)
+- [post-data.php](post-data.php)
